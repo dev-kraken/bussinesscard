@@ -1,4 +1,7 @@
+"use client";
 import Image from "next/image";
+
+
 
 import Banner1 from "../images/banner/banner1.jpg";
 import Profile from "../images/banner/man.png";
@@ -18,6 +21,13 @@ import Washington from "../images/icons/washington.png";
 
 import Link from "next/link";
 
+
+
+
+import {signIn} from "next-auth/react" 
+
+
+
 export default function Home() {
   return (
     <div className="container max-w-md mx-auto font-poppins">
@@ -27,6 +37,7 @@ export default function Home() {
 
       {/* Title Header  */}
       <h4 className="text-center">Real Estate</h4>
+      <button onClick={()=>{signIn();}}>Login</button>
       <h2 className="text-center text-3xl font-dancing">Michael Jackson</h2>
       {/* Social Media Icons  */}
       <div className="gap-4 columns-4 mx-auto px-4 mt-3">
